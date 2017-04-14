@@ -1,0 +1,27 @@
+app.directive('appNav', function ($rootScope, $state, constants) {
+
+	var Nav = function (scope, elem, attrs) {
+
+		scope.route    = 'home';
+		scope.isOpen   = false;
+		scope.isMobile = constants.isMobile();
+		scope.social   = Object.keys(constants.contact.social).map(function (key) {
+			return { type: key, url: constants.contact.social[key] };
+		});
+
+		scope.goTo   = function (stateName) { $state.go(stateName); scope.isOpen = false; };
+		scope.toggle = function ()          { scope.isOpen      = !scope.isOpen;          };
+
+		$rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+			scope.route = toState.name;
+		});
+	};
+
+	return {
+		restrict:    "E",
+		transclude:  true,
+		replace:     true,
+		link:        Nav,
+		templateUrl: 'app/appNav/appNavDirective.html'
+	};
+});

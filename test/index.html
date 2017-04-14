@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <link href="styles/font-awesome.min.css" rel="stylesheet" />
+        <link href="styles/bebas-neue.css" rel="stylesheet" media="all" />
+        <link href="styles/theme.css" rel="stylesheet" /> 
+        <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="favicon.ico" type="image/x-icon">
+    </head>
+
+    <body class="app">
+        <app-nav></app-nav>
+        <section class="app-content" ui-view="contents">
+            <div class="content-loader">
+                <div class="logo">
+                    <div class="word">N</div>
+                    <div class="word">F</div>
+                    <div class="word">G</div>
+                </div>
+
+                <div class="rectangles">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+            </div>
+        </section>
+        <notifications></notifications>
+
+        <!-- inject:js -->
+        <script src="/lib/angular/angular.js"></script>
+        <script src="/lib/angular/angular-ui-router.js"></script>
+        <script src="/app/app.js"></script>
+        <script src="/app/constants.js"></script>
+        <script src="/app/aboutUs/aboutUsController.js"></script>
+        <script src="/app/appFooter/appFooterDirective.js"></script>
+        <script src="/app/appNav/appNavDirective.js"></script>
+        <script src="/app/calendar/scheduleController.js"></script>
+        <script src="/app/calendar/weeklyScheduleDirective.js"></script>
+        <script src="/app/contact/addressMapDirective.js"></script>
+        <script src="/app/contact/contactController.js"></script>
+        <script src="/app/contact/contactInfoDirective.js"></script>
+        <script src="/app/contact/sendMessageDirective.js"></script>
+        <script src="/app/facility/facilityController.js"></script>
+        <script src="/app/home/homeController.js"></script>
+        <script src="/app/images/imageCollectionDirective.js"></script>
+        <script src="/app/login/forgotPasswordController.js"></script>
+        <script src="/app/login/loginController.js"></script>
+        <script src="/app/news/facebookDirective.js"></script>
+        <script src="/app/news/instagramDirective.js"></script>
+        <script src="/app/news/newsController.js"></script>
+        <script src="/app/pricing/pricingController.js"></script>
+        <script src="/app/pricing/pricingDirective.js"></script>
+        <script src="/app/shared/dateTimeTextFilter.js"></script>
+        <script src="/app/shared/hashTagFilter.js"></script>
+        <script src="/app/shared/iconDirective.js"></script>
+        <script src="/app/shared/imageViewerDirective.js"></script>
+        <script src="/app/shared/loaderDirective.js"></script>
+        <script src="/app/shared/notificationsDirective.js"></script>
+        <script src="/app/shared/notificationsService.js"></script>
+        <script src="/app/shared/popoverDirective.js"></script>
+        <script src="/app/support/enums.js"></script>
+        <script src="/app/support/utils.js"></script>
+        <script src="/app/warehouse/warehouseService.js"></script>
+        <script src="/app/wod/wodController.js"></script>
+        <script src="/app/contact/models/sendMessage.js"></script>
+        <script src="/app/login/models/forgotPassword.js"></script>
+        <script src="/app/login/models/login.js"></script>
+        <script src="/app/shared/models/responseMsg.js"></script>
+        <script src="/app/shared/models/validationModel.js"></script>
+        <script src="/app/support/extenders/dateExtender.js"></script>
+        <script src="/app/support/extenders/stringExtender.js"></script>
+        <script src="/app/main.js"></script>
+        <!-- endinject -->
+    </body>
+</html>

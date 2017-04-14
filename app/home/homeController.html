@@ -1,0 +1,224 @@
+<div class="controller-view home-view">
+
+	<div 
+	    ng-if="initializing !== false"
+	    class="content-loader">
+	    <div class="logo">
+	        <div class="word">N</div>
+	        <div class="word">F</div>
+	        <div class="word">G</div>
+	    </div>
+
+	    <div class="rectangles">
+	        <div class="rect1"></div>
+	        <div class="rect2"></div>
+	        <div class="rect3"></div>
+	        <div class="rect4"></div>
+	        <div class="rect5"></div>
+	    </div>
+	</div>
+
+	<section class="welcome-row row">
+
+		<image-collection images="imageList"></image-collection>
+		<!--
+			https://www.instagram.com/p/BKXKskGA9R5/?taken-by=josh.trumbull
+
+		<video class="image-collection-view" poster="https://instagram.ftpa1-1.fna.fbcdn.net/t51.2885-15/s640x640/e15/14369232_1831085867126051_1119216505_n.jpg?ig_cache_key=MTMzOTU4NjQ1NzA0MzcxOTI4OQ%3D%3D.2" preload="none" src="https://instagram.ftpa1-1.fna.fbcdn.net/t50.2886-16/14302032_1754302701509616_436422444_n.mp4" type="video/mp4" loop=""></video>
+	-->
+
+		<section class="today-section">
+
+			<header>Today's Schedule</header>
+
+			<ul class="items">
+				<li 
+					ng-if="today.wod"
+					ng-click="goTo('wod')"
+					class="item clickable wod-item row">
+					<icon type="wod"></icon>
+		    		<span class="title"><span>View WOD</span></span>
+	    		</li>
+
+	    		<li
+	    			ng-repeat="event in today.events" 
+	    			class="item class-item row">
+
+	    			<!-- <span class="icon time open">
+	    				<span ng-bind="event.start"></span>
+	    				<span>-</span>
+	    				<span ng-bind="event.end"></span>
+    				</span> -->
+
+					<span class="icon time" ng-bind="event.start"></span>
+
+					<span class="title" ng-bind="event.title"></span>
+	    		</li>
+			</ul>
+
+			<div 
+    			ng-if="!today.isOpen && !today.loading"
+    			class="empty align-center">
+    			<span>Gym is closed today</span>
+			</div>
+
+			<div 
+    			ng-if="today.loading"
+    			class="empty align-center">
+    			<span class="fa fa-spinner fa-spin"></span>
+			</div>
+		</section>
+	</section>
+
+	<section class="row details-row">
+
+		<a
+			ng-click="goTo('about-us')"
+			class="details-block">
+
+			<div 
+				class="background grayscale"
+				style="background-image: url(images/img_5_400.jpg);"></div>
+
+			<div class="content">
+
+				<header class="details-header">What is NinjaFit Gym?</header>
+
+				<div class="details-desc">An obstacle gym specialized for American Ninja Warrior, OCR and Functional Fitness training.</div>
+
+				<footer class="details-footer">
+					<span class="fa fa-minus"></span>
+					<span>Read More</span>
+					<span class="fa fa-minus"></span>
+				</footer>
+			</div>
+		</a>
+
+		<a 
+			ng-click="goTo('facility')"
+			class="details-block">
+
+			<div 
+				class="background grayscale"
+				style="background-image: url(images/functional_1_400.jpg);"></div>
+
+			<div class="content">
+
+				<header class="details-header">Our Facility</header>
+
+				<div class="details-desc">Check out an in-depth virtual tour of our gym.</div>
+
+				<footer class="details-footer">
+					<span class="fa fa-minus"></span>
+					<span>Read More</span>
+					<span class="fa fa-minus"></span>
+				</footer>
+			</div>
+		</a>
+
+		<a
+			ng-click="goTo('about-us.staff')"
+			class="details-block">
+
+			<div 
+				class="background grayscale"
+				style="background-image: url(images/img_7_400.jpg);"></div>
+
+			<div class="content">
+
+				<header class="details-header">Our Team</header>
+
+				<div class="details-desc">Our team is here for you. Check out what makes us qualified.</div>
+
+				<footer class="details-footer">
+					<span class="fa fa-minus"></span>
+					<span>Read More</span>
+					<span class="fa fa-minus"></span>
+				</footer>
+			</div>
+		</a>
+
+		<a
+			ng-click="goTo('pricing')"
+			class="details-block">
+
+			<div 
+				class="background grayscale"
+				style="background-image: url(images/img_3_400.jpg);"></div>
+
+			<div class="content">
+
+				<header class="details-header">Pricing</header>
+
+				<div class="details-desc">Have questions about what we have available? Let's get you some answers.</div>
+
+				<footer class="details-footer">
+					<span class="fa fa-minus"></span>
+					<span>Read More</span>
+					<span class="fa fa-minus"></span>
+				</footer>
+			</div>
+		</a>
+	</section>
+
+	<section ng-if="facebook.post" class="social-section">
+
+		<span class="icon home-icon fa fa-facebook"></span>
+
+		<section class="facebook-post-content">
+
+			<div 
+				ng-bind-html="facebook.post.text | hashTagLinks:facebook.post.hashTags:facebook.post.hashTagPrefixUrl"
+				class="post-body"></div>
+
+			<div class="posted-by">
+				<a 
+					target="_facebook"
+					ng-bind="facebook.page.name"
+					ng-attr-href="{{facebook.page.link}}"></a>
+			</div>
+		</section>
+
+	</section>
+
+	<section class="social-section">
+
+		<span class="icon home-icon fa fa-instagram"></span>
+
+		<section class="instagram-feed row">
+
+			<a
+				class="link media"
+				target="_instagram"
+				ng-repeat="media in instagram.media"
+				ng-class="{ video: media.isVideo }"
+				ng-attr-href="{{media.linkUrl}}">
+
+				<img ng-src="{{media.thumbnailUrl}}" />
+
+				<div class="row details">
+
+					<div ng-if="media.isVideo" class="row">
+						<span class="fa fa-play"></span>
+						<span ng-bind="media.videoViews"></span>
+					</div>
+
+					<div ng-if="!media.isVideo" class="row">
+						<span class="fa fa-heart"></span>
+						<span ng-bind="media.likeCount"></span>
+					</div>
+
+					<div class="row">
+						<span class="fa fa-comment"></span>
+						<span ng-bind="media.commentCount"></span>
+					</div>
+				</div>
+			</a>
+		</section>
+	</section>
+
+	<section class="section row">
+		<send-message></send-message>
+		<contact-info address-map="true"></contact-info>
+	</section>
+</div>

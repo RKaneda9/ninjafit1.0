@@ -1,0 +1,22 @@
+<div class="controller-view facility-view">
+	<content-loader visible="initializing"></content-loader>
+
+	<section class="section">
+		<header class="section-header">About Our Gym!</header>
+
+		<section class="section-pane">
+			<p class="intro-text">Welcome to NinjaFit Gym, the premiere Ninja Warrior and OCR (Obstacle Course Racing) training facility in Central Florida!</p>
+
+			<div class="image-list">
+				<div 
+					ng-repeat="image in images"
+					ng-click="previewImage($index)"
+					class="image-item"
+					ng-style="{ 'background-image': 'url(' + (image.preview || image.url) + ')' }">
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<image-viewer show="showPreviewer" index="activeImage" images="images"></image-viewer>
+</div>

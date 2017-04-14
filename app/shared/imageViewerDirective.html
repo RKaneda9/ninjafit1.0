@@ -1,0 +1,36 @@
+<section class="image-viewer">
+
+	<section 
+		ng-if="show && images.length > 0"
+		class="viewer-content">
+
+		<header class="view-header">
+			<p class="title">{{index+1}} / {{images.length}}</p>
+
+			<button 
+				ng-click="close()"
+				class="close-btn ctrl">
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</button>
+		</header>
+
+		<div class="image-wrapper">
+			<img ng-src="{{images[index].url}}" />
+		</div>
+
+		<footer class="view-footer">
+			<button 
+				ng-click="prev()"
+				class="prev-btn ctrl arrow">
+				<span class="fa fa-angle-left"></span>
+			</button>
+
+			<button 
+				ng-click="next()"
+				class="next-btn ctrl arrow">
+				<span class="fa fa-angle-right"></span>
+			</button>
+		</footer>
+	</section>
+</section>

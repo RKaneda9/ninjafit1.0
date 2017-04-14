@@ -1,0 +1,25 @@
+<section class="image-collection-view">
+	<div 
+		ng-if="showBtns"
+		class="controls">
+		
+	    <button 
+	    	ng-click="prev()"
+	    	class="directional-btn -back">
+	    	<span class="fa fa-angle-left"></span>
+	    </button>
+
+	    <button 
+	    	ng-click="next()"
+	    	class="directional-btn -next">
+	    	<span class="fa fa-angle-right"></span>
+	    </button>
+    </div>
+
+    <div
+    	class="image" 
+    	ng-repeat="image in images"
+    	ng-style="{ 'background-image': 'url(' + image.url + ')' }"
+    	ng-class="{ active: $index == index }">
+	</div>
+</section>

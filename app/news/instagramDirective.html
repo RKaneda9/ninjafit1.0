@@ -1,0 +1,37 @@
+<section 
+	ng-show="feed"
+	class="instagram section">
+
+	<header class="section-header">Instagram</header>
+
+	<section class="instagram-feed row">
+		<a
+			class="link media"
+			target="_instagram"
+			ng-repeat="media in feed.media"
+			ng-class="{ video: media.isVideo }"
+			ng-attr-href="{{media.linkUrl}}">
+
+			<img ng-src="{{media.thumbnailUrl}}" />
+
+			<div class="row details">
+
+				<div ng-if="media.isVideo" class="row">
+					<span class="fa fa-play"></span>
+					<span ng-bind="media.videoViews"></span>
+				</div>
+
+				<div ng-if="!media.isVideo" class="row">
+					<span class="fa fa-heart"></span>
+					<span ng-bind="media.likeCount"></span>
+				</div>
+
+				<div class="row">
+					<span class="fa fa-comment"></span>
+					<span ng-bind="media.commentCount"></span>
+				</div>
+			</div>
+		</a>
+
+	</section>
+</section>
