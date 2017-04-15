@@ -8,6 +8,10 @@
   "local-web-server": {
     "port": 8600
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RKaneda9/ninjafit1.0.git"
+  },
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-angular-templatecache": "1.8.0",
