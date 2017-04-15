@@ -664,6 +664,14 @@ a.link:hover { color: #662E91; cursor: pointer; }
 /********************************************************************/
 /********************************************************************/
 /********************************************************************/
+@media (max-height: 1200px) {
+	.wod-view .image-collection-view .image { height: 400px; }
+}
+
+@media (max-height: 1000px) {
+	.wod-view .image-collection-view .image { height: 300px; }
+}
+
 @media (max-height: 800px) {
 	.contact-view .image-collection-view { display: none; }
 	.news-view .image-collection-view { display: none; }
@@ -675,6 +683,8 @@ a.link:hover { color: #662E91; cursor: pointer; }
 
 @media (max-height: 700px) {
 	.login-view .image-collection-view .image { max-height: 130px; }
+
+	.wod-view .image-collection-view .image { height: 200px; }
 }
 
 /********************************************************************/

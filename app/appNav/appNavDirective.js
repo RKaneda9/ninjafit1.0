@@ -9,8 +9,18 @@ app.directive('appNav', function ($rootScope, $state, constants) {
 			return { type: key, url: constants.contact.social[key] };
 		});
 
-		scope.goTo   = function (stateName) { $state.go(stateName); scope.isOpen = false; };
-		scope.toggle = function ()          { scope.isOpen      = !scope.isOpen;          };
+		scope.toggle = function () { scope.isOpen = !scope.isOpen; };
+
+		scope.goTo = function (stateName) { 
+			scope.isOpen = false;
+
+			if (stateName == 'login') {
+				window.location = "https://ninjafitgyms.sites.zenplanner.com/login.cfm";
+			}
+			else {
+				$state.go(stateName); 
+			}
+		};
 
 		$rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 			scope.route = toState.name;
