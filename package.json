@@ -4,7 +4,7 @@
   "author": "Raiden Kaneda",
   "license": "ISC",
   "description": "NinjaFit Gym Website",
-  "homepage": "http://www.ninjafitgym.com",
+  "homepage": "http://www.ninjafitgyms.com",
   "local-web-server": {
     "port": 8600
   },
