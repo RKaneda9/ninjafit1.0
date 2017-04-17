@@ -4,7 +4,8 @@ app.constant('constants', {
 	//apiUrl    : 'http://localhost:9999/warehouse/',
 	//apiUrl    : 'http://api.raidenkaneda.com/warehouse/',
 	//apiUrl    : 'http://api.ninjafitgym.com/warehouse/',
-	apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
+	//apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
+	apiUrl    : 'http://localhost:5100/',
 	images    : {
 		"main": [
 			{ "url": "images/img_6.jpg" }

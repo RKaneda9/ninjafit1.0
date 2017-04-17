@@ -9,7 +9,7 @@ app.service('warehouseService', function ($http, $q, $timeout, notificationsServ
 
 		if (wods) { return resolve(wods); }
 
-		var url = constants.apiUrl + "wods";
+		var url = constants.apiUrl + "workouts/wod";
 		
 		return $http
 			.get(url)
@@ -21,7 +21,7 @@ app.service('warehouseService', function ($http, $q, $timeout, notificationsServ
 
 		if (start && schedule[start]) { return resolve(schedule[start]); }
 
-		var url = constants.apiUrl + "schedule?start=" + (start || '');
+		var url = constants.apiUrl + "schedule/calendar/week?datekey=" + (start || '');
 		
 		return $http
 			.get(url)

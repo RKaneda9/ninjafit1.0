@@ -165,7 +165,7 @@ app.directive('weeklySchedule', function (warehouseService, utils, constants) {
 				startKey = data.start || constants.defaults.weeklySchedule.start;
 				  endKey = data.end   || constants.defaults.weeklySchedule.end;
 				   hours = getHours(startKey, endKey);
-				   	days = utils.map(data.days, function (day) { return new Day(day.date, startKey, endKey, day.blocks, todayKey === day.date); });
+				   	days = utils.map(data.days, function (day) { return new Day(day.date, startKey, endKey, day.items, todayKey === day.date); });
 
 				if (days.length) {
 

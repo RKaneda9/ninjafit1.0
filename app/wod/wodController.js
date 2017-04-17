@@ -4,24 +4,22 @@ app.controller('wod', function ($scope, warehouseService, constants) {
 	$scope.wods         = [];
 	$scope.initializing = true;
 
-	function parseWods (wods) {
+	function parseWods (data) {
+		var wods = data && typeof data == 'object' ? data.workouts : null;
+
 		if (!wods || !(wods instanceof Array)) { return []; }
 
 		return wods.map(function (wod) {
 			return {
 				title    : wod.title,
-				trackBy  : wod.trackBy,
-				contents : wod.contents && wod.contents instanceof Array ? wod.contents.map(parseContent) : []
+				subtitle : wod.subtitle,
+				contents : wod.contents
 			};
 		});
 	}
 
-	function parseContent (content) { 
-		return content.split('&nbsp;').join(' ');
-	}
-
 	warehouseService
 		.getWods()
-		.then   (function (wods) { $scope.wods         = parseWods(wods);  })
-		.finally(function ()     { $scope.initializing = false; });
+		.then   (function (result) { $scope.wods         = parseWods(result); })
+		.finally(function ()       { $scope.initializing = false; });
 });
