@@ -22,7 +22,7 @@
 
 					<p class="posted-date">
 						<span>Posted: </span>
-						<span ng-bind="post.createdKey | dateTimeText"></span>
+						<span ng-bind="post.createdKey | dateTimeText:true"></span>
 					</p>
 				</div>
 			</header>
@@ -49,6 +49,7 @@
 
 					<div 
 						class="image"
+						ng-if="post.link.image"
 						ng-class="post.link.type.toLowerCase() === 'video' ? 'play-link' : ''">
 
 						<img ng-src="{{post.link.image}}" />

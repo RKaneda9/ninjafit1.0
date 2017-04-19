@@ -2,6 +2,7 @@ app.constant('constants', {
 	contentUrl: 'app/',
 	appBaseUrl: 'app/',
 	apiUrl    : 'http://api.ninjafitgyms.com/',
+	//apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
 	//apiUrl    : 'http://localhost:5100/',
 	images    : {
 		"main": [

@@ -40,7 +40,7 @@ app.controller('home', function ($scope, $rootScope, warehouseService, constants
 			});
 
 			if (today) {
-				$scope.today.events = utils.map(today.blocks, function (block) {
+				$scope.today.events = utils.map(today.items, function (block) {
 
 					//if (block.type == 'Open') { return null; }
 
@@ -55,7 +55,7 @@ app.controller('home', function ($scope, $rootScope, warehouseService, constants
 					};
 				});
 
-				$scope.today.isOpen = !!today.blocks.length;
+				$scope.today.isOpen = !!today.items.length;
 			}
 		})
 		.finally(function () { if (++loaded > 1) { $scope.today.loading = false; } });

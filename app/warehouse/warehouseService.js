@@ -10,7 +10,8 @@ app.service('warehouseService', function ($http, $q, $timeout, notificationsServ
 		if (wods) { return resolve(wods); }
 
 		var url = constants.apiUrl + "workouts/wod";
-		
+		//var url = constants.apiUrl + "wods";
+
 		return $http
 			.get(url)
 			.error(function ()         { notificationsService.addError("There was a problem trying to retrieve today's WOD."); })
@@ -22,6 +23,7 @@ app.service('warehouseService', function ($http, $q, $timeout, notificationsServ
 		if (start && schedule[start]) { return resolve(schedule[start]); }
 
 		var url = constants.apiUrl + "schedule/calendar/week?datekey=" + (start || '');
+		//var url = constants.apiUrl + "schedule?start=" + (start || '');
 		
 		return $http
 			.get(url)
@@ -42,7 +44,9 @@ app.service('warehouseService', function ($http, $q, $timeout, notificationsServ
 	};
 
 	self.sendMessage = function (msg) {
-		var url = constants.apiUrl + 'message';
+		//var url = constants.apiUrl + 'message';
+		var url = constants.apiUrl + 'contact/message';
+		
 		return $http.post(url, msg)
 			.success(function (response) { 
 
