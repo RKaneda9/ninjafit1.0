@@ -5,6 +5,7 @@ app.controller('aboutUs', function ($scope, $sce, $state, warehouseService, util
 		return {
 			image: member.image,
 			name : member.name,
+			title: member.title,
 			bio  : $sce.trustAsHtml('<p>' + (member.bio.split('\n').join('</p><p>')) + '</p>')
 		};
 	});
