@@ -76,6 +76,12 @@ app.constant('constants', {
 			bio: "As a lifelong student of fitness and sports, I've committed my experience to teaching, training, and empowering my students through movement and self-awareness. I work towards enhancing the well-being of my clients by empowering them with the knowledge, skills, support, guidance and resources to assist and inspire them on their journey to a healthier life.\nAs second oldest of seven children an active lifestyle, sports, and sharing my passions started at a very young age. My love of fitness has led me on a journey that has included running an ultra marathon, duathalon, triathlon, the Chicago marathon, and numerous Spartan and Mud races. This year I will be heading to Canada to compete at OCR (obstacle Course racing) worlds and Miami to try out for team USA!\nWhen I'm not coaching you will find me playing ultimate frisbee, doing yoga, rock climbing, gymnastics, kickboxing, or cross training. Outside of training myself I've coached for Camp Gladiator Bootcamp, Dekalb County YMCA, Nick Parker Bootcamp, Lake Mary Fit Club and have studied nutrition and healthy eating for the past 8 years. I continually seek to achieve a balance through constant practice, education, and a state of compassion and gratitude."
 		},
 		{
+			image: 'images/kat.jpg',
+			name: 'Kathryn Ciresi',
+			title: "Trainer",
+			bio: "Kathryn (Kat) was born in Columbus, Ohio and grew up most of her life in St. Petersburg, Florida. She holds a Bachelors in Science from The University of Florida in Health/Human Performance and is a former UF Cheerleader. She is a fun loving energetic (NASM) Certified Personal Trainer and an IFBB Masters Bikini Pro that holds numerous certifications in the fitness field including TRX Suspension Training, Kettlebell, Speed and Osteoblast Training, Core Conditioning, Kickboxing, and Nutrition. Her passion is Health and Fitness and her greatest desire is to help others live a healthy strong life for as many years as possible."
+		},
+		{
 			image: 'images/profile_pic.png',
 			name: 'Chad Young',
 			title: "Owner/Head Trainer",
