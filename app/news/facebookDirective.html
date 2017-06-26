@@ -37,7 +37,7 @@
 					ng-if="post.image"
 					target="facebook" 
 					class="post-image"
-					ng-attr-href="{{post.image.link}}">
+					ng-attr-href="{{post.image.link || post.image.href}}">
 					<img ng-src="{{post.image.url}}" />
 				</a>
 

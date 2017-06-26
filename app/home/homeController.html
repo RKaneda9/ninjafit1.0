@@ -221,4 +221,51 @@
 		<send-message></send-message>
 		<contact-info address-map="true"></contact-info>
 	</section>
+
+	<div
+		ng-class="{ show: showPopup }" 
+		class="popup">
+
+		<div class="panel">
+			<div class="content">
+				<header class="header">
+					<button ng-click="closePopup()" class="close-btn ctrl">
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+					<span>Kids Summer Camps</span>
+				</header>
+				<div class="image" ng-style="{ 'background-image': 'url(./images/kids_5.jpg)' }"></div>
+				<div class="details">
+					<p>NinjaFit Gym is running weekly summer camps beginning Monday, June 5th - August 12th.</p>
+					<p>The "Family Ninja" Josh Phillips will be assisting our ninja coaches in the curriculum for your young, aspiring ninjas!</p>
+					<p>The camps will run from 9am - 2pm daily.</p>
+				</div>
+				<div class="separator">
+					<p>Interested?</p> 
+					<p>Reserve your spot today!</p>
+				</div>
+				<footer class="footer">
+					<a 
+				    	ng-attr-href="tel:407-250-4496"
+				    	target="phone" 
+				    	class="link row">
+
+				    	<div class="extender">Click to call us!</div>
+
+				    	<span class="icon fa fa-phone"></span>
+				    	<span class="text">407-250-4496</span>
+					</a>
+
+					<a class="link row" href="mailto:ninjafitgyms@gmail.com?subject=NinjaFit Kids Summer Camp">
+
+						<div class="extender">Click to message us!</div>
+
+						<span class="icon fa fa-envelope"></span>
+						<span class="text ng-binding">ninjafitgyms@gmail.com</span>
+					</a>
+				</footer>
+			</div>
+		</div>
+	</div>
 </div>

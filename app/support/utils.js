@@ -117,5 +117,43 @@ app.constant('utils', {
         }
 
         return obj;
+    },
+
+    clearCookie: function (cookieName) {
+        this.setCookie(cookieName, "", new Date());
+    },
+
+    setCookie: function (cookieName, cookieValue, expires, path) {
+
+        if (!cookieValue) {
+            cookieValue = "";
+        }
+
+        if (!expires) {
+            expires = new Date();
+            expires.setDate(expires.getDate() + 1);
+        }
+
+        if (!path) {
+            path = "/"; 
+        }
+        
+        document.cookie = cookieName + "=" + cookieValue + ";expires=" + (new Date(expires)).toGMTString()+ "; path=" + path;
+    },
+
+    getCookie: function (name) {
+        
+        var cookie = document.cookie.toString();
+
+        if (cookie.indexOf(name) == -1) { return false; }
+
+        var s = cookie.indexOf(name + "=");
+        var e = cookie.indexOf(";", s);
+
+        s += name.length + 1;
+
+        if (e == -1) { e = cookie.length; }
+
+        return cookie.substring(s, e);
     }
 });

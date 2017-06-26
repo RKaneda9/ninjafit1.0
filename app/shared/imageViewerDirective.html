@@ -15,9 +15,7 @@
 			</button>
 		</header>
 
-		<div class="image-wrapper">
-			<img ng-src="{{images[index].url}}" />
-		</div>
+		<div class="image" ng-style="{ 'background-image': 'url(' + images[index].url + ')' }" />
 
 		<footer class="view-footer">
 			<button 

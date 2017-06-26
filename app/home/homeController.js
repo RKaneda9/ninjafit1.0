@@ -1,9 +1,10 @@
-app.controller('home', function ($scope, $rootScope, warehouseService, constants, utils) {
+app.controller('home', function ($scope, $rootScope, $timeout, warehouseService, constants, utils) {
 	$scope.imageList    = constants.images.main;
 	$scope.initializing = true;
 	$scope.facebook     = {};
 	$scope.instagram    = [];
 	$scope.goTo         = $rootScope.goTo;
+	$scope.showPopup    = false; //constants.showPopup && !utils.getCookie('nfg-announcement');
 	$scope.today        = {
 
 		events : [],
@@ -11,6 +12,21 @@ app.controller('home', function ($scope, $rootScope, warehouseService, constants
 		wod    : null,
 		loading: true
 	};
+
+	$scope.closePopup = function () {
+		$scope.showPopup = false;
+
+		var expires = new Date();
+		expires.setDate(expires.getDate() + 1);
+
+		utils.setCookie('nfg-announcement', true, expires);
+	};
+
+	if (constants.showPopup && !utils.getCookie('nfg-announcement')) {
+		$timeout(function () {
+			$scope.showPopup = true;
+		}, 200);
+	}
 
 	warehouseService
 		.getSocialFeeds()

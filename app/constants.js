@@ -1,9 +1,10 @@
 app.constant('constants', {
 	contentUrl: 'app/',
 	appBaseUrl: 'app/',
-	apiUrl    : 'http://api.ninjafitgyms.com/',
+	//apiUrl    : 'http://api.ninjafitgyms.com/',
 	//apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
-	//apiUrl    : 'http://localhost:5100/',
+	apiUrl    : 'http://www.ninjafitgyms.com/api/',
+	showPopup : true,
 	images    : {
 		"main": [
 			{ "url": "images/img_6.jpg" }
