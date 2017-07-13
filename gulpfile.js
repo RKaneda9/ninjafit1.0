@@ -34,7 +34,7 @@ gulp.task('default', function () {
 				.pipe(annotate())
 				.pipe(concat('app-bootstrapper'))
 		)
-		.pipe(concat('app.js'))
+		.pipe(concat('public/app.js'))
 		.pipe(gulp.dest('compiled'))
 		.pipe(uglify())
 		.pipe(gulp.dest(''));

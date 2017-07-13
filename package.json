@@ -13,6 +13,7 @@
     "url": "https://github.com/RKaneda9/ninjafit1.0.git"
   },
   "devDependencies": {
+    "express": "^4.15.3",
     "gulp": "3.9.1",
     "gulp-angular-templatecache": "1.8.0",
     "gulp-concat": "2.6.0",
