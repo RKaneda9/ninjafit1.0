@@ -1,77 +1,77 @@
 <section class="section weekly-schedule-view">
 
-	<header class="section-header">
-			
-		<span ng-bind="header"></span>
-		<span ng-if="!showNav">
-			<loader visible="loading"></loader>
-		</span>
+    <header class="section-header">
+            
+        <span ng-bind="header"></span>
+        <span ng-if="!showNav">
+            <loader visible="loading"></loader>
+        </span>
 
-	</header>
+    </header>
 
-	<section ng-if="showNav" class="week-picker row">
+    <section ng-if="showNav" class="week-picker row">
 
-		<button ng-click="getPrevWeek()" class="btn">
-			<span class="fa fa-angle-left"></span>
-		</button>
+        <button ng-click="getPrevWeek()" class="btn">
+            <span class="fa fa-angle-left"></span>
+        </button>
 
-		<span 
-			ng-if="!loading"
-			ng-bind="title"
-			class="text">
-		</span>
+        <span 
+            ng-if="!loading"
+            ng-bind="title"
+            class="text">
+        </span>
 
-		<loader class="text" visible="loading"></loader>
+        <loader class="text" visible="loading"></loader>
 
-		<button ng-click="getNextWeek()" class="btn">
-			<span class="fa fa-angle-right"></span>
-		</button>
-	</section>
+        <button ng-click="getNextWeek()" class="btn">
+            <span class="fa fa-angle-right"></span>
+        </button>
+    </section>
 
-	<section class="weekly-schedule">
+    <section class="weekly-schedule">
 
-		<div
-			class="week-day"
-			ng-repeat="day in days" 
-			ng-class="{ today: day.isToday }">
+        <div
+            class="week-day"
+            ng-repeat="day in days" 
+            ng-class="{ today: day.isToday }">
 
 
-			<div class="hours">
+            <div class="hours">
 
-				<div 
-					ng-repeat="hour in hours"
-					ng-bind="hour.text"
-					class="hour"></div>
-			</div>
+                <div 
+                    ng-repeat="hour in hours"
+                    ng-bind="hour.text"
+                    class="hour"></div>
+            </div>
 
-			<div class="details">
+            <div class="details">
 
-				<div 
-					class="title" 
-					ng-bind="day.title"></div>
+                <div 
+                    class="title" 
+                    ng-bind="day.title"></div>
 
-				<ul class="schedule">
-					<li ng-repeat="block in day.blocks" class="schedule-block">
-						
-						<div ng-repeat="col in block.cols" class="block-col">
+                <ul class="schedule">
+                    <li ng-repeat="block in day.blocks" class="schedule-block">
+                        
+                        <div ng-repeat="col in block.cols" class="block-col">
 
-							<div
-								ng-repeat="item in col.items" 
-								ng-style="item.style"
-								ng-attr-type="{{item.type}}"
-								class="block-item">
+                            <div
+                                ng-repeat="item in col.items" 
+                                ng-style="item.style"
+                                ng-attr-type="{{item.type}}"
+                                class="block-item">
 
-								<span ng-bind="item.title"></span>
+                                <span ng-bind="item.title"></span>
 
-								<div class="hover-box bottom dark">
-									<div class="arrow"></div>
-									<div class="content" ng-bind="item.range"></div>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
+                                <div class="hover-box bottom dark">
+                                    <div class="arrow"></div>
+                                    <div class="content" ng-bind="item.range"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </section>

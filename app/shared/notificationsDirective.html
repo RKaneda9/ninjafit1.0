@@ -1,14 +1,14 @@
 <section id="notifications">
-	<section 
-		ng-repeat="item in notifications" 
-		ng-class="item.class" 
-		ng-click="remove(item.id)">
+    <section 
+        ng-repeat="item in notifications" 
+        ng-class="item.class" 
+        ng-click="remove(item.id)">
 
-		<strong 
-			ng-bind="item.title"
-			class="title">
-		</strong>
+        <strong 
+            ng-bind="item.title"
+            class="title">
+        </strong>
 
-		<span ng-bind="item.msg"></span>
-	</section>
+        <span ng-bind="item.msg"></span>
+    </section>
 </section>

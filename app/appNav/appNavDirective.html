@@ -1,115 +1,115 @@
 <section 
-	ng-class="{ mobile: isMobile, desktop: !isMobile }"
-	class="app-nav-wrapper">
+    ng-class="{ mobile: isMobile, desktop: !isMobile }"
+    class="app-nav-wrapper">
 
-	<nav 
-		class="app-nav"
-		ng-class="{ open: isOpen}">
+    <nav 
+        class="app-nav"
+        ng-class="{ open: isOpen}">
 
-		<div class="logo-wrapper">
-			<a 
-				ng-click="goTo('home')"
-				class="logo">
-				<span class="word">
-					<span class="letter">N</span>
-					<span class="remaining"><span>inja</span></span>
-				</span>
-				<span class="word">
-					<span class="letter">F</span>
-					<span class="remaining"><span>it</span></span>
-				</span>
-				<span class="word">
-					<span class="letter">G</span>
-					<span class="remaining"><span>ym</span></span>
-				</span>
-			</a>
-			<a 
-				ng-click="toggle()"
-				class="menu-toggle">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-			</a>
-		</div>
+        <div class="logo-wrapper">
+            <a 
+                ng-click="goTo('home')"
+                class="logo">
+                <span class="word">
+                    <span class="letter">N</span>
+                    <span class="remaining"><span>inja</span></span>
+                </span>
+                <span class="word">
+                    <span class="letter">F</span>
+                    <span class="remaining"><span>it</span></span>
+                </span>
+                <span class="word">
+                    <span class="letter">G</span>
+                    <span class="remaining"><span>ym</span></span>
+                </span>
+            </a>
+            <a 
+                ng-click="toggle()"
+                class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+        </div>
 
-		<section class="user-greeting">
-			<p>Welcome Ninja!</p>
-		</section>
+        <section class="user-greeting">
+            <p>Welcome Ninja!</p>
+        </section>
 
-		<ul class="nav-links">
-		    <a 
-		    	ng-class="{ active: route == 'about-us' }"
-		    	ng-click="goTo('about-us')"
-		    	class="nav-link">
-		    	<span class="fa fa-users"></span>
-		    	<span class="link-text"><span>About Us</span></span>
-		    </a>
-		    <a 
-		    	ng-class="{ active: route == 'facility' }"
-		    	ng-click="goTo('facility')"
-		    	class="nav-link">
-		    	<span class="fa fa-building"></span>
-		    	<span class="link-text"><span>Our Gym</span></span>
-		    </a>
-		    <a 
-		    	ng-class="{ active: route == 'news' }"
-		    	ng-click="goTo('news')"
-		    	class="nav-link">
-		    	<span class="fa fa-newspaper-o"></span>
-		    	<span class="link-text"><span>News</span></span>
-		    </a>
-		    <a 
-		    	ng-class="{ active: route == 'schedule' }"
-		    	ng-click="goTo('schedule')"
-		    	class="nav-link">
-		    	<span class="fa fa-calendar"></span>
-		    	<span class="link-text"><span>Schedule</span></span>
-		    </a>
-		    <a 
-		    	class="nav-link" 
-		    	ng-click="goTo('wod')" 
-		    	ng-class="{ active: route == 'wod' }">
+        <ul class="nav-links">
+            <a 
+                ng-class="{ active: route == 'about-us' }"
+                ng-click="goTo('about-us')"
+                class="nav-link">
+                <span class="fa fa-users"></span>
+                <span class="link-text"><span>About Us</span></span>
+            </a>
+            <a 
+                ng-class="{ active: route == 'facility' }"
+                ng-click="goTo('facility')"
+                class="nav-link">
+                <span class="fa fa-building"></span>
+                <span class="link-text"><span>Our Gym</span></span>
+            </a>
+            <a 
+                ng-class="{ active: route == 'news' }"
+                ng-click="goTo('news')"
+                class="nav-link">
+                <span class="fa fa-newspaper-o"></span>
+                <span class="link-text"><span>News</span></span>
+            </a>
+            <a 
+                ng-class="{ active: route == 'schedule' }"
+                ng-click="goTo('schedule')"
+                class="nav-link">
+                <span class="fa fa-calendar"></span>
+                <span class="link-text"><span>Schedule</span></span>
+            </a>
+            <a 
+                class="nav-link" 
+                ng-click="goTo('wod')" 
+                ng-class="{ active: route == 'wod' }">
 
-		    	<icon type="wod"></icon>
-		    	<span class="link-text"><span>WOD</span></span>
-		    </a>
-		     <a 
-		    	class="nav-link" 
-		    	ng-click="goTo('pricing')" 
-		    	ng-class="{ active: route == 'pricing' }">
+                <icon type="wod"></icon>
+                <span class="link-text"><span>WOD</span></span>
+            </a>
+             <a 
+                class="nav-link" 
+                ng-click="goTo('pricing')" 
+                ng-class="{ active: route == 'pricing' }">
 
-		    	<span class="fa fa-money"></span>
-		    	<span class="link-text"><span>Pricing</span></span>
-		    </a>
-		    <a 
-		    	ng-class="{ active: route == 'contact' }"
-		    	ng-click="goTo('contact')"
-		    	class="nav-link">
-		    	<span class="fa fa-envelope"></span>
-		    	<span class="link-text"><span>Contact</span></span>
-		    </a>
-		    <a 
-		    	ng-class="{ active: route == 'login' }"
-		    	ng-click="goTo('login')"
-		    	class="nav-link">
-		    	<span class="fa fa-sign-in"></span>
-		    	<span class="link-text"><span>Login</span></span>
-		    </a>
-		</ul>
+                <span class="fa fa-money"></span>
+                <span class="link-text"><span>Pricing</span></span>
+            </a>
+            <a 
+                ng-class="{ active: route == 'contact' }"
+                ng-click="goTo('contact')"
+                class="nav-link">
+                <span class="fa fa-envelope"></span>
+                <span class="link-text"><span>Contact</span></span>
+            </a>
+            <a 
+                ng-class="{ active: route == 'login' }"
+                ng-click="goTo('login')"
+                class="nav-link">
+                <span class="fa fa-sign-in"></span>
+                <span class="link-text"><span>Login</span></span>
+            </a>
+        </ul>
 
-		<div class="social-links">
-			<a
-				ng-repeat="link in social"
-				ng-attr-href="{{link.url}}"
-				ng-attr-type="{{link.type}}"
-				target="social"
-				class="social-link">
+        <div class="social-links">
+            <a
+                ng-repeat="link in social"
+                ng-attr-href="{{link.url}}"
+                ng-attr-type="{{link.type}}"
+                target="social"
+                class="social-link">
 
-				<span 
-					class="fa"
-					ng-class="'fa-' + link.type">
-				</span>
-			</a>			
-		</div>
-	</nav>
+                <span 
+                    class="fa"
+                    ng-class="'fa-' + link.type">
+                </span>
+            </a>            
+        </div>
+    </nav>
 </section>

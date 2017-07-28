@@ -1,20 +1,20 @@
 app.factory('forgotPasswordModel', function (validationModel) {
 
-	function ForgotPasswordModel () {
-		this.props.userName = { value: '', invalid: false };
+    function ForgotPasswordModel () {
+        this.props.userName = { value: '', invalid: false };
 
-		this.isValid = function () {
+        this.isValid = function () {
 
-			var props = this.trim();
+            var props = this.trim();
 
-			if (!props.userName || !props.userName.length) { return this.setInvalid(this.props.userName, 'Please enter a Username to retreive password.'); } 
-				
-			return this.clearValidation();
+            if (!props.userName || !props.userName.length) { return this.setInvalid(this.props.userName, 'Please enter a Username to retreive password.'); } 
+                
+            return this.clearValidation();
 
-		}.bind(this);
-	}
+        }.bind(this);
+    }
 
-	ForgotPasswordModel.prototype = validationModel.prototype;
+    ForgotPasswordModel.prototype = validationModel.prototype;
 
-	return ForgotPasswordModel;
+    return ForgotPasswordModel;
 });

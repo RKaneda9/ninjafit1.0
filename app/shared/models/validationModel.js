@@ -1,44 +1,44 @@
 app.factory('validationModel', function (utils) {
-	function ValidationModel() { }
+    function ValidationModel() { }
 
-	ValidationModel.prototype = {
+    ValidationModel.prototype = {
 
-		props: {},
-		errMsg: '',
+        props: {},
+        errMsg: '',
 
-		get: function () {
-			return utils.mapObject(this.props, function (obj, prop, key) {
-				obj[key] = prop.value;
-			});
-		},
+        get: function () {
+            return utils.mapObject(this.props, function (obj, prop, key) {
+                obj[key] = prop.value;
+            });
+        },
 
-		trim: function () {
-			utils.foreach(this.props, function (prop) {
-				prop.value = prop.value.trim();
-			});
+        trim: function () {
+            utils.foreach(this.props, function (prop) {
+                prop.value = prop.value.trim();
+            });
 
-			return this.get();
-		},
+            return this.get();
+        },
 
-		clear: function () {
-			utils.foreach(this.props, function (prop) { prop.value = ''; });
-			return this.clearValidation();
-		},
+        clear: function () {
+            utils.foreach(this.props, function (prop) { prop.value = ''; });
+            return this.clearValidation();
+        },
 
-		clearValidation: function () {
-			utils.foreach(this.props, function (prop) { prop.invalid = false; });
-			this.errMsg = '';
-			return true;
-		},
+        clearValidation: function () {
+            utils.foreach(this.props, function (prop) { prop.invalid = false; });
+            this.errMsg = '';
+            return true;
+        },
 
-		setInvalid: function (target, msg) {
+        setInvalid: function (target, msg) {
 
-			this  .clearValidation();
-			this  .errMsg  = msg;
-			target.invalid = true; 
-			return false;
-		}
-	};
+            this  .clearValidation();
+            this  .errMsg  = msg;
+            target.invalid = true; 
+            return false;
+        }
+    };
 
-	return ValidationModel;
+    return ValidationModel;
 });

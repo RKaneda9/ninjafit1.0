@@ -1,56 +1,56 @@
 <section class="contact-info row-item">
-	<section class="content">
-	    <header class="section-header">Contact NinjaFit</header>
+    <section class="content">
+        <header class="section-header">Contact NinjaFit</header>
 
-	    <a 
-	    	ng-if="phone"
-	    	ng-attr-href="tel:{{phone}}"
-	    	target="phone" 
-	    	class="link row">
+        <a 
+            ng-if="phone"
+            ng-attr-href="tel:{{phone}}"
+            target="phone" 
+            class="link row">
 
-	    	<span class="icon fa fa-phone"></span>
-	    	<span class="text" ng-bind="phone"></span>
-		</a>
+            <span class="icon fa fa-phone"></span>
+            <span class="text" ng-bind="phone"></span>
+        </a>
 
-		<a 
-			ng-if="email"
-			ng-attr-href="mailto:{{email}}"
-			class="link row">
+        <a 
+            ng-if="email"
+            ng-attr-href="mailto:{{email}}"
+            class="link row">
 
-			<span class="icon fa fa-envelope"></span>
-			<span class="text" ng-bind="email"></span>
-		</a>
+            <span class="icon fa fa-envelope"></span>
+            <span class="text" ng-bind="email"></span>
+        </a>
 
-		<a 
-			ng-if="address"
-			ng-attr-href="http://maps.google.com/maps?q={{address.street.split(' ').join('+')}}+{{address.city}}+{{address.state}}+{{address.zip}}"
-			target="google-maps"
-			class="link row">
-			
-			<span class="icon fa fa-map-marker"></span>
-			<span class="text">
-				<p ng-bind="address.street"></p>
-				<p ng-bind="address.city + ', ' + address.state + ' ' + address.zip"></p>
-			</span>
-		</a>
-		<div 
-			ng-if="social"
-			class="row social">
+        <a 
+            ng-if="address"
+            ng-attr-href="http://maps.google.com/maps?q={{address.street.split(' ').join('+')}}+{{address.city}}+{{address.state}}+{{address.zip}}"
+            target="google-maps"
+            class="link row">
+            
+            <span class="icon fa fa-map-marker"></span>
+            <span class="text">
+                <p ng-bind="address.street"></p>
+                <p ng-bind="address.city + ', ' + address.state + ' ' + address.zip"></p>
+            </span>
+        </a>
+        <div 
+            ng-if="social"
+            class="row social">
 
-			<a
-				ng-repeat="item in social"
-				ng-attr-href="{{item.url}}"
-				ng-attr-type="{{item.type}}"
-				target="social"
-				class="btn">
+            <a
+                ng-repeat="item in social"
+                ng-attr-href="{{item.url}}"
+                ng-attr-type="{{item.type}}"
+                target="social"
+                class="btn">
 
-				<span 
-					class="fa"
-					ng-class="'fa-' + item.type">
-				</span>
-			</a>
-		</div>
-	</section>
+                <span 
+                    class="fa"
+                    ng-class="'fa-' + item.type">
+                </span>
+            </a>
+        </div>
+    </section>
 
-	<address-map ng-if="addressMap"></address-map>
+    <address-map ng-if="addressMap"></address-map>
 </section>

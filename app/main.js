@@ -1,3 +1,3 @@
 angular.element().ready(function () {
-	angular.bootstrap(document.documentElement, ['app']);
+    angular.bootstrap(document.documentElement, ['app']);
 });

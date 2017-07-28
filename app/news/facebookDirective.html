@@ -1,80 +1,80 @@
 <section 
-	ng-show="feed"
-	class="facebook section">
+    ng-show="feed"
+    class="facebook section">
 
-	<header class="section-header">Facebook</header>
+    <header class="section-header">Facebook</header>
 
-	<section class="facebook-feed">
-		<div 
-			ng-repeat="post in feed.posts"
-			class="facebook-post">
-			<header class="post-header row">
-				<a target="facebook" class="profile-picture" ng-attr-href="{{feed.page.link}}">
-					<img ng-src="{{feed.page.image}}" />
-				</a>
+    <section class="facebook-feed">
+        <div 
+            ng-repeat="post in feed.posts"
+            class="facebook-post">
+            <header class="post-header row">
+                <a target="facebook" class="profile-picture" ng-attr-href="{{feed.page.link}}">
+                    <img ng-src="{{feed.page.image}}" />
+                </a>
 
-				<div class="post-title">
-					<a 
-						target="facebook" 
-						class="author"
-						ng-attr-href="{{feed.page.link}}" 
-						ng-bind="feed.page.name"></a>
+                <div class="post-title">
+                    <a 
+                        target="facebook" 
+                        class="author"
+                        ng-attr-href="{{feed.page.link}}" 
+                        ng-bind="feed.page.name"></a>
 
-					<p class="posted-date">
-						<span>Posted: </span>
-						<span ng-bind="post.createdKey | dateTimeText:true"></span>
-					</p>
-				</div>
-			</header>
+                    <p class="posted-date">
+                        <span>Posted: </span>
+                        <span ng-bind="post.createdKey | dateTimeText:true"></span>
+                    </p>
+                </div>
+            </header>
 
-			<div class="post-content">
-				<p 
-					class="text"
-					ng-bind-html="post.text | hashTagLinks:post.hashTags:post.hashTagPrefixUrl">
-				</p>
+            <div class="post-content">
+                <p 
+                    class="text"
+                    ng-bind-html="post.text | hashTagLinks:post.hashTags:post.hashTagPrefixUrl">
+                </p>
 
-				<a 
-					ng-if="post.image"
-					target="facebook" 
-					class="post-image"
-					ng-attr-href="{{post.image.link || post.image.href}}">
-					<img ng-src="{{post.image.url}}" />
-				</a>
+                <a 
+                    ng-if="post.image"
+                    target="facebook" 
+                    class="post-image"
+                    ng-attr-href="{{post.image.link || post.image.href}}">
+                    <img ng-src="{{post.image.url}}" />
+                </a>
 
-				<a 
-					ng-if="post.link"
-					target="facebook-link" 
-					ng-attr-href="{{post.link.href}}" 
-					class="post-link row">
+                <a 
+                    ng-if="post.link"
+                    target="facebook-link" 
+                    ng-attr-href="{{post.link.href}}" 
+                    class="post-link row">
 
-					<div 
-						class="image"
-						ng-if="post.link.image"
-						ng-class="post.link.type.toLowerCase() === 'video' ? 'play-link' : ''">
+                    <div 
+                        class="image"
+                        ng-if="post.link.image"
+                        ng-class="post.link.type.toLowerCase() === 'video' ? 'play-link' : ''">
 
-						<img ng-src="{{post.link.image}}" />
-					</div>
+                        <img ng-src="{{post.link.image}}" />
+                    </div>
 
-					<div 
-						ng-if="post.link.title || post.link.description || post.link.caption"
-						class="post-link-details">
-						<div ng-bind="post.link.title" class="title"></div>
-						<div ng-bind="post.link.description" class="desc"></div>
-						<div ng-bind="post.link.caption" class="caption"></div>
-					</div>
-				</a>
-		
-			</div>
-			<footer class="post-footer row">
-				<a class="row" target="facebook" ng-attr-href="{{post.action}}">
-					<span class="fa fa-thumbs-up"></span>
-					<span>Like</span>
-				</a>
-				<a class="row" target="facebook" ng-attr-href="{{post.action}}">
-					<span class="fa fa-comment"></span>
-					<span>Comment</span>
-				</a>
-			</footer>
-		</div>
-	</section>
+                    <div 
+                        ng-if="post.link.title || post.link.description || post.link.caption"
+                        class="post-link-details">
+                        <div ng-bind="post.link.title" class="title"></div>
+                        <div ng-bind="post.link.description" class="desc"></div>
+                        <div ng-bind="post.link.caption" class="caption"></div>
+                    </div>
+                </a>
+        
+            </div>
+            <footer class="post-footer row">
+                <a class="row" target="facebook" ng-attr-href="{{post.action}}">
+                    <span class="fa fa-thumbs-up"></span>
+                    <span>Like</span>
+                </a>
+                <a class="row" target="facebook" ng-attr-href="{{post.action}}">
+                    <span class="fa fa-comment"></span>
+                    <span>Comment</span>
+                </a>
+            </footer>
+        </div>
+    </section>
 </section>

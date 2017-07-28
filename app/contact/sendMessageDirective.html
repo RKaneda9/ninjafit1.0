@@ -1,59 +1,59 @@
 <section class="pane send-message">
 
-	<header class="pane-header">Questions? Send Us a Message!</header>
+    <header class="pane-header">Questions? Send Us a Message!</header>
 
-	<div class="input-item">
-		<p class="input-label">Name</p>
+    <div class="input-item">
+        <p class="input-label">Name</p>
 
-		<div class="row">
+        <div class="row">
 
-			<popover show="msg.props.firstName.invalid" msg="msg.errMsg">
-				<input type="text" ng-model="msg.props.firstName.value" />
-			</popover>
-			
-			<popover show="msg.props.lastName.invalid" msg="msg.errMsg" dir="left">
-				<input type="text" ng-model="msg.props.lastName.value" />
-			</popover>
-		</div>
-	</div>
+            <popover show="msg.props.firstName.invalid" msg="msg.errMsg">
+                <input type="text" ng-model="msg.props.firstName.value" />
+            </popover>
+            
+            <popover show="msg.props.lastName.invalid" msg="msg.errMsg" dir="left">
+                <input type="text" ng-model="msg.props.lastName.value" />
+            </popover>
+        </div>
+    </div>
 
-	<div class="input-item">
-		<p class="input-label">Email</p>
+    <div class="input-item">
+        <p class="input-label">Email</p>
 
-		<div class="row">
+        <div class="row">
 
-			<popover show="msg.props.email.invalid" msg="msg.errMsg">
-				<input type="text" ng-model="msg.props.email.value" />
-			</popover>
-		</div>
-	</div>
+            <popover show="msg.props.email.invalid" msg="msg.errMsg">
+                <input type="text" ng-model="msg.props.email.value" />
+            </popover>
+        </div>
+    </div>
 
-	<div class="input-item">
-		<p class="input-label">Message</p>
+    <div class="input-item">
+        <p class="input-label">Message</p>
 
-		<div class="row">
+        <div class="row">
 
-			<popover show="msg.props.content.invalid" msg="msg.errMsg">
-				<textarea ng-model="msg.props.content.value"></textarea>
-			</popover>
-		</div>
-	</div>
-	
-	<div 
-		ng-if="msg.text"
-		ng-bind="msg.text"
-		class="alert"
-		ng-class="{ danger: msg.isError, success: !msg.isError }">
-	</div>
+            <popover show="msg.props.content.invalid" msg="msg.errMsg">
+                <textarea ng-model="msg.props.content.value"></textarea>
+            </popover>
+        </div>
+    </div>
+    
+    <div 
+        ng-if="msg.text"
+        ng-bind="msg.text"
+        class="alert"
+        ng-class="{ danger: msg.isError, success: !msg.isError }">
+    </div>
 
-	<footer class="pane-footer">
+    <footer class="pane-footer">
 
-		<div class="loader" ng-if="sending">
-			<span class="fa fa-spinner fa-spin"></span>
-		</div>
+        <div class="loader" ng-if="sending">
+            <span class="fa fa-spinner fa-spin"></span>
+        </div>
 
-		<button class="btn inverse" ng-click="send()">
-			<span>Send</span>
-		</button>
-	</footer>
+        <button class="btn inverse" ng-click="send()">
+            <span>Send</span>
+        </button>
+    </footer>
 </section>

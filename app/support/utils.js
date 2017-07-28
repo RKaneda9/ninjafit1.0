@@ -1,18 +1,18 @@
 app.constant('utils', {
-	
-	generateId: function () { return Math.random().toString(36).substring(2); },
+    
+    generateId: function () { return Math.random().toString(36).substring(2); },
 
-	pad: function (val, length) { 
-		return ("00000" + val).slice(-1 * length);
-	},
+    pad: function (val, length) { 
+        return ("00000" + val).slice(-1 * length);
+    },
 
-	min: function (array, func, defaultVal) {
+    min: function (array, func, defaultVal) {
         var min = defaultVal || Infinity;
 
         if (!array) { return min; }
 
         if (!func || typeof(func) !== 'function') { 
-        	func = function (item) { return item; };
+            func = function (item) { return item; };
         }
 
         var keys = Object.keys(array);
@@ -24,9 +24,9 @@ app.constant('utils', {
         }
 
         return min;
-	},
+    },
 
-	first: function (array, func, defVal) {
+    first: function (array, func, defVal) {
 
         if (!(array instanceof Array)) { return defVal; }
 

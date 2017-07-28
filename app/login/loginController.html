@@ -1,81 +1,81 @@
 <div class="controller-view login-view">
-	<image-collection images="imageList"></image-collection>
-	
-	<section class="section login-section">
-		<header class="section-header">Ninja Login</header>
+    <image-collection images="imageList"></image-collection>
+    
+    <section class="section login-section">
+        <header class="section-header">Ninja Login</header>
 
-		<section class="pane login-pane">
-			<header class="pane-header row">
-				<a 
-					ng-click="register()"
-					class="link">
-					<span>New Ninja?</span>
-				</a>
-				<div class="logo circle">
-					<span class="word">
-						<span class="letter">N</span>
-						<span class="remaining"><span>inja</span></span>
-					</span>
-					<span class="word">
-						<span class="letter">F</span>
-						<span class="remaining"><span>it</span></span>
-					</span>
-					<span class="word">
-						<span class="letter">G</span>
-						<span class="remaining"><span>ym</span></span>
-					</span>
-				</div>
-				<a 
-					ng-click="forgotPassword()"
-					class="link">
-					<span>Forgot Password?</span>
-				</a>
-			</header>
+        <section class="pane login-pane">
+            <header class="pane-header row">
+                <a 
+                    ng-click="register()"
+                    class="link">
+                    <span>New Ninja?</span>
+                </a>
+                <div class="logo circle">
+                    <span class="word">
+                        <span class="letter">N</span>
+                        <span class="remaining"><span>inja</span></span>
+                    </span>
+                    <span class="word">
+                        <span class="letter">F</span>
+                        <span class="remaining"><span>it</span></span>
+                    </span>
+                    <span class="word">
+                        <span class="letter">G</span>
+                        <span class="remaining"><span>ym</span></span>
+                    </span>
+                </div>
+                <a 
+                    ng-click="forgotPassword()"
+                    class="link">
+                    <span>Forgot Password?</span>
+                </a>
+            </header>
 
-			<label class="input-item">
-				<p class="input-label">Username</p>
+            <label class="input-item">
+                <p class="input-label">Username</p>
 
-				<div class="row">
+                <div class="row">
 
-					<popover show="model.props.userName.invalid" msg="model.errMsg">
-						<input 
-							type="text" 
-							ng-model="model.props.userName.value"
-							ng-keydown="keydown($event)" />
-					</popover>
-				</div>
-			</label>
+                    <popover show="model.props.userName.invalid" msg="model.errMsg">
+                        <input 
+                            type="text" 
+                            ng-model="model.props.userName.value"
+                            ng-keydown="keydown($event)" />
+                    </popover>
+                </div>
+            </label>
 
-			<label class="input-item">
-				<p class="input-label">Password</p>
+            <label class="input-item">
+                <p class="input-label">Password</p>
 
-				<div class="row">
+                <div class="row">
 
-					<popover show="model.props.password.invalid" msg="model.errMsg">
-						<input 
-							type="password" 
-							ng-model="model.props.password.value"
-							ng-keydown="keydown($event)" />
-					</popover>
-				</div>
-			</label>
+                    <popover show="model.props.password.invalid" msg="model.errMsg">
+                        <input 
+                            type="password" 
+                            ng-model="model.props.password.value"
+                            ng-keydown="keydown($event)" />
+                    </popover>
+                </div>
+            </label>
 
-			<div 
-				ng-if="msg.text"
-				ng-bind="msg.text"
-				class="alert"
-				ng-class="{ danger: msg.isError, success: !msg.isError }">
-			</div>
+            <div 
+                ng-if="msg.text"
+                ng-bind="msg.text"
+                class="alert"
+                ng-class="{ danger: msg.isError, success: !msg.isError }">
+            </div>
 
-			<footer class="pane-footer">
-				<div class="loader" ng-if="posting">
-					<span class="fa fa-spinner fa-spin"></span>
-				</div>
+            <footer class="pane-footer">
+                <div class="loader" ng-if="posting">
+                    <span class="fa fa-spinner fa-spin"></span>
+                </div>
 
-				<button class="btn inverse" ng-click="login()">
-					<span>Login</span>
-				</button>
-			</footer>
-		</section>
-	</section>
+                <button class="btn inverse" ng-click="login()">
+                    <span>Login</span>
+                </button>
+            </footer>
+        </section>
+    </section>
 </div>

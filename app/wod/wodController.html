@@ -1,41 +1,41 @@
 <div class="controller-view wod-view">
-	<content-loader visible="initializing"></content-loader>
+    <content-loader visible="initializing"></content-loader>
 
-	<image-collection images="imageList"></image-collection>
+    <image-collection images="imageList"></image-collection>
 
-	<section class="section">
-		<header class="section-header">WOD</header>
+    <section class="section">
+        <header class="section-header">WOD</header>
 
-		<section class="row wods">
-			<section 
-				ng-repeat="wod in wods track by $index"
-				class="wod">
+        <section class="row wods">
+            <section 
+                ng-repeat="wod in wods track by $index"
+                class="wod">
 
-				<header class="wod-header">
-					<span ng-bind="wod.title"></span>
-				</header>
+                <header class="wod-header">
+                    <span ng-bind="wod.title"></span>
+                </header>
 
-				<section class="wod-sub-header">
-					<span ng-bind="wod.subtitle"></span>
-				</section>
+                <section class="wod-sub-header">
+                    <span ng-bind="wod.subtitle"></span>
+                </section>
 
-				<section class="wod-contents">
+                <section class="wod-contents">
 
-					<p 
-						ng-repeat="content in wod.contents track by $index" 
-						ng-bind="content"></p>
-				</section>
+                    <p 
+                        ng-repeat="content in wod.contents track by $index" 
+                        ng-bind="content"></p>
+                </section>
 
-				<section 
-					ng-if="wods.length > 1"
-					ng-bind="'[' + ($index + 1) + '/' + wods.length + ']'"
-					class="wod-footer"></section>
-			</section>
-			<section ng-if="!wods.length" class="wod">
-				<header class="wod-header align-center">
-					<span>No WOD set for today.</span>
-				</header>
-			</section>
-		</section>
-	</section>
+                <section 
+                    ng-if="wods.length > 1"
+                    ng-bind="'[' + ($index + 1) + '/' + wods.length + ']'"
+                    class="wod-footer"></section>
+            </section>
+            <section ng-if="!wods.length" class="wod">
+                <header class="wod-header align-center">
+                    <span>No WOD set for today.</span>
+                </header>
+            </section>
+        </section>
+    </section>
 </div>
