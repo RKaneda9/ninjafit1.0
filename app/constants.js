@@ -4,7 +4,7 @@ app.constant('constants', {
     //apiUrl    : 'http://api.ninjafitgyms.com/',
     //apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
     apiUrl    : 'http://www.ninjafitgyms.com/api/',
-    showPopup : true,
+    showPopup : false,
     images    : {
         "main": [
             { "url": "images/img_6.jpg" }
