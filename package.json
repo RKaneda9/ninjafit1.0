@@ -28,6 +28,6 @@
   },
   "scripts": {
     "build": "gulp",
-    "start": "ws"
+    "start": "npm run build && node server"
   }
 }

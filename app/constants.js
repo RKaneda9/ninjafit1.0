@@ -5,6 +5,18 @@ app.constant('constants', {
     //apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
     apiUrl    : 'http://www.ninjafitgyms.com/api/',
     showPopup : false,
+    waivers   : [
+        {
+            "title":   "Adult Waiver",
+            "link":    "https://www.smartwaiver.com/w/599f0ac2e7849/web/",
+            "bgImage": "images/img_5_400.jpg"
+        },
+        {
+            "title":   "Minor Waiver",
+            "link":    "https://www.smartwaiver.com/w/599f059d8f577/web/",
+            "bgImage": "images/kids_5.jpg"
+        }
+    ],
     images    : {
         "main": [
             { "url": "images/img_6.jpg" }
@@ -16,7 +28,7 @@ app.constant('constants', {
             { "url": "images/functional_1.jpg" }
         ],
         "pricing": [
-            { "url": "images/functional_2.jpg" } 
+            { "url": "images/functional_2.jpg" }
         ],
         "facility": [
             { "url": "images/facility_1.jpg",  "preview": "images/facility_1_preview.jpg" },
@@ -115,7 +127,7 @@ app.constant('constants', {
             days : [
                 {
                     day: 'Sunday',
-                    blocks: []        
+                    blocks: []
                 },
                 {
                     day: 'Monday',

@@ -15,7 +15,7 @@ app.config(function($stateProvider,$urlRouterProvider) {
             }
         })
         .state("about-us", {
-            url: "/about-us", 
+            url: "/about-us",
             views: {
                 contents: {
                     controller:  "aboutUs",
@@ -26,7 +26,7 @@ app.config(function($stateProvider,$urlRouterProvider) {
         .state("about-us.staff", {
             url: "/staff",
             views: {
-                contents: { 
+                contents: {
                     controller:  "aboutUs",
                     templateUrl: "app/aboutUs/aboutUsController.html"
                 }
@@ -50,7 +50,7 @@ app.config(function($stateProvider,$urlRouterProvider) {
                 }
             }
         })
-        .state("news", {  
+        .state("news", {
             url: "/news",
             views: {
                 contents: {
@@ -59,7 +59,7 @@ app.config(function($stateProvider,$urlRouterProvider) {
                 }
             }
         })
-        .state("schedule", {        
+        .state("schedule", {
             url: "/schedule",
             views: {
                 contents: {
@@ -68,7 +68,7 @@ app.config(function($stateProvider,$urlRouterProvider) {
                 }
             }
         })
-        .state("wod", {        
+        .state("wod", {
             url: "/wod",
             views: {
                 contents: {
@@ -95,7 +95,7 @@ app.config(function($stateProvider,$urlRouterProvider) {
                 }
             }
         })
-        .state("forgotPassword", {       
+        .state("forgotPassword", {
             url: "/forgot",
             views: {
                 contents: {
@@ -104,7 +104,16 @@ app.config(function($stateProvider,$urlRouterProvider) {
                 }
             }
         })
-        .state("register", {        
+        .state("waivers", {
+            url: "/waivers",
+            views: {
+                contents: {
+                    controller: "waivers",
+                    templateUrl: "app/contact/waiversController.html"
+                }
+            }
+        })
+        .state("register", {
             url: "/register",
             views: {
                 contents: {

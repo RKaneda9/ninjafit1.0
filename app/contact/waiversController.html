@@ -1,0 +1,33 @@
+<div class="controller-view waivers-view">
+    <image-collection images="imageList"></image-collection>
+
+    <section class="section">
+        <header class="section-header">Waivers</header>
+
+        <div class="waiver-list">
+            <a
+                ng-repeat="waiver in waivers"
+                ng-attr-href="{{waiver.link}}"
+                target="waiver"
+                class="waiver">
+
+                <span
+                    ng-style="{ backgroundImage: 'url(' + waiver.bgImage + ')' }"
+                    class="background grayscale"></span>
+
+                <span class="content">
+
+                    <span
+                        ng-bind="waiver.title"
+                        class="details-desc"></span>
+
+                    <span class="details-footer">
+                        <span class="fa fa-minus"></span>
+                        <span>View and Sign</span>
+                        <span class="fa fa-minus"></span>
+                    </span>
+                </span>
+            </a>
+        </div>
+    </section>
+</div>
