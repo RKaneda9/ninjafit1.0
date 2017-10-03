@@ -21,14 +21,12 @@ app.directive('weeklySchedule', function (warehouseService, utils, constants) {
 
         self.addBlock = function (block) {
             var parent = utils.first(self.blocks, function (dayBlock) { return dayBlock.end >= block.start; });
-
             if (!parent) {
-
-                var start = self.blocks.length ? utils.min(self.blocks, function (block) { return block.end; }) : startTimeKey;
+                var start = self.blocks.length ? utils.max(self.blocks, function (block) { return block.end; }) : startTimeKey;
                 parent = new DayBlock(start, block);
                 return self.blocks.push(parent);
             }
-            
+
             parent.addBlockItem(block);
         };
 
@@ -83,7 +81,7 @@ app.directive('weeklySchedule', function (warehouseService, utils, constants) {
         self.style = {};
 
         function getIndex() {
-            var i = parentCol.items.length; 
+            var i = parentCol.items.length;
 
             while (--i > -1 && parentCol.items[i].id !== self.id);
 
@@ -102,7 +100,7 @@ app.directive('weeklySchedule', function (warehouseService, utils, constants) {
             var   itemBtm = toInt(self.end);
             var   itemTop = toInt(self.start);
             var parentTop = toInt(startKey);
-
+            
             self.style.marginTop = (hourBlockHeight * (itemTop - parentTop)) + 'px';
             self.style.height    = (hourBlockHeight * (itemBtm - itemTop))   + 'px';
         };

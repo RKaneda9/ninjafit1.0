@@ -1,9 +1,29 @@
 app.constant('utils', {
-    
+
     generateId: function () { return Math.random().toString(36).substring(2); },
 
-    pad: function (val, length) { 
+    pad: function (val, length) {
         return ("00000" + val).slice(-1 * length);
+    },
+
+    max: function (array, func, defaultVal) {
+        var max = defaultVal || -Infinity;
+
+        if (!array) { return max; }
+
+        if (!func || typeof(func) !== 'function') {
+            func = function (item) { return item; };
+        }
+
+        var keys = Object.keys(array);
+
+        for (var i = 0; i < keys.length; i++) {
+            var result = func(array[keys[i]], i);
+
+            if (result > max) { max = result; }
+        }
+
+        return max;
     },
 
     min: function (array, func, defaultVal) {
@@ -11,7 +31,7 @@ app.constant('utils', {
 
         if (!array) { return min; }
 
-        if (!func || typeof(func) !== 'function') { 
+        if (!func || typeof(func) !== 'function') {
             func = function (item) { return item; };
         }
 
@@ -95,7 +115,7 @@ app.constant('utils', {
 
         for (var i in styles) {
             str += i + ':' + styles[i] + ';';
-        } 
+        }
     },
 
     getQueryObj: function () {
@@ -135,14 +155,14 @@ app.constant('utils', {
         }
 
         if (!path) {
-            path = "/"; 
+            path = "/";
         }
-        
+
         document.cookie = cookieName + "=" + cookieValue + ";expires=" + (new Date(expires)).toGMTString()+ "; path=" + path;
     },
 
     getCookie: function (name) {
-        
+
         var cookie = document.cookie.toString();
 
         if (cookie.indexOf(name) == -1) { return false; }
