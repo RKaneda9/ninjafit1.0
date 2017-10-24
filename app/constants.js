@@ -19,7 +19,8 @@ app.constant('constants', {
     ],
     images    : {
         "main": [
-            { "url": "images/img_6.jpg" }
+            { "url": "images/img_2758.jpg" },
+            { "url": "images/img_2757.jpg" }
         ],
         "wod": [
             { "url": "http://d1gzvc2c13psez.cloudfront.net/sites/6/2015/04/wod-strength-hero.jpg" }
@@ -31,6 +32,14 @@ app.constant('constants', {
             { "url": "images/functional_2.jpg" }
         ],
         "facility": [
+            { "url": "images/img_2755.jpg",    "preview": "images/img_2755_preview.jpg" },
+            { "url": "images/img_2759.jpg",    "preview": "images/img_2759_preview.jpg" },
+            { "url": "images/img_2758.jpg",    "preview": "images/img_2758_preview.jpg" },
+            { "url": "images/img_2757.jpg",    "preview": "images/img_2757_preview.jpg" },
+            { "url": "images/img_2752.jpg",    "preview": "images/img_2752_preview.jpg" },
+            { "url": "images/img_2756.jpg",    "preview": "images/img_2756_preview.jpg" },
+            { "url": "images/img_2751.jpg",    "preview": "images/img_2751_preview.jpg" },
+            { "url": "images/img_2750.jpg",    "preview": "images/img_2750_preview.jpg" },
             { "url": "images/facility_1.jpg",  "preview": "images/facility_1_preview.jpg" },
             { "url": "images/facility_2.jpg",  "preview": "images/facility_2_preview.jpg" },
             { "url": "images/facility_3.jpg",  "preview": "images/facility_3_preview.jpg" },
