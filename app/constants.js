@@ -3,7 +3,7 @@ app.constant('constants', {
     appBaseUrl: 'app/',
     //apiUrl    : 'http://api.ninjafitgyms.com/',
     //apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
-    apiUrl    : 'http://www.ninjafitgyms.com/api/',
+    //apiUrl    : 'http://www.ninjafitgyms.com/api/',
     showPopup : false,
     waivers   : [
         {
@@ -70,7 +70,7 @@ app.constant('constants', {
 
     contact: {
         phone: '407-250-4496',
-        email: 'ninjafitgyms@gmail.com',
+        email: 'info@ninjafitgyms.com',
         address: {
             street: '6541 North Orange Blossom Trail, Suit 100',
             city: 'Orlando',
