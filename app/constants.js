@@ -3,7 +3,7 @@ app.constant('constants', {
     appBaseUrl: 'app/',
     //apiUrl    : 'http://api.ninjafitgyms.com/',
     //apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
-    //apiUrl    : 'http://www.ninjafitgyms.com/api/',
+    apiUrl    : 'http://www.ninjafitgyms.com/api/',
     showPopup : false,
     waivers   : [
         {
