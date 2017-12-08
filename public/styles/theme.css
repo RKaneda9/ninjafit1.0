@@ -379,7 +379,7 @@ a.link:hover { color: #662E91; cursor: pointer; }
 .weekly-schedule-view .week-picker .text { width: 300px; font-size: 24px; text-align: center; }
 
 .weekly-schedule { display: flex; padding: 0px 61px 0px 0px; flex-direction: row; align-items: flex-start; justify-content: center; flex-wrap: wrap; }
-.weekly-schedule .week-day { flex: 1 0 300px; margin-bottom: 50px; display: flex; flex-direction: row; margin-right: -61px; }
+.weekly-schedule .week-day { flex: 1 0 500px; max-width: 100%; margin-bottom: 50px; display: flex; flex-direction: row; margin-right: -61px; }
 .weekly-schedule .hours { flex: 0 0 60px; display: flex; flex-direction: column; padding-top: 27.5px; }
 .weekly-schedule .hours .hour { flex: 1 0 25px; white-space: nowrap; display: flex; flex-direction: row; align-items: center; justify-content: flex-end; height: 25px; min-height: 25px; max-height: 25px; }
 .weekly-schedule .hours .hour:after { content: '-'; margin-left: 5px; }
