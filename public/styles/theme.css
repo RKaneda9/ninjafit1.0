@@ -361,6 +361,7 @@ a.link:hover { color: #662E91; cursor: pointer; }
 /***                Pricing					                        */
 /********************************************************************/
 .pricing-list { flex-wrap: wrap; display: flex; flex-direction: row; align-items: stretch; justify-content: space-between; }
+.pricing-list:not(:last-child) { margin-bottom: 80px; }
 .pricing-block { text-align: center; flex: 1 0 150px; margin: 5px; display: flex; flex-direction: column; background: #f9f9f9; box-shadow: inset 0px 0px 0px 1px #e4e4e5; border-radius: 5px; }
 .pricing-block .pricing-header { white-space: nowrap; padding: 15px; background: #8851B3; color: #fff; flex: 0 0 auto; font-size: 24px; border-radius: 5px 5px 0 0; }
 .pricing-block .pricing-content { display: flex; flex-direction: column; flex: 2 2 auto; }
@@ -369,6 +370,8 @@ a.link:hover { color: #662E91; cursor: pointer; }
 .pricing-block .price .sub-text { font-family: Helvetica, Arial, sans-serif; font-size: 12px; }
 .pricing-block .content { padding-bottom: 15px; }
 .pricing-block .content .item { margin: 10px 15px 0 15px; flex: 2; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 16px; line-height: 20px; }
+.pricing-block .footer { padding: 15px; }
+.pricing-block .footer .btn { display: inline-block; font-size: 18px; }
 
 /********************************************************************/
 /***                Calendar: Weekly Schedule                       */
