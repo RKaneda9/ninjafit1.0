@@ -105,6 +105,12 @@ app.constant('constants', {
         },
         {
             image: 'images/profile_pic.png',
+            name: 'Eric Ortiz',
+            title: 'Trainer',
+            bio: "My name is Eric Ortiz and I'm 32 years old. My life has been spent in the water. I was a water polo player during high school, surfed, and I’ve been a lifeguard instructor and supervisor for many years. I started running about 5 years ago, starting with 5ks and continued on to half marathons and challenge weekends. 2 years ago, I started CrossFit and Olympic lifting and fell in love. I’ve participated in team competition, as well2 CrossFit Lift Offs where I have placed both times. I’ve also coached several teams at local competitions, where most of my teams have placed. I have also done many OCR (obstacle course races) in the past 2 years. I will continue growing in my own training and coaching going forward - it’s become an integral part of who I am."
+        },
+        {
+            image: 'images/profile_pic.png',
             name: 'Chad Young',
             title: "Owner/Head Trainer",
             bio: "I am a husband and father with three kids. I have an athletic background. I played college basketball, and designed strength and conditioning programs for many athletes for over 11 years. My passion is strength and conditioning, program design and weightlifting. I have many certifications including NASM CES (corrective exercise specialist), a BS in Kinesiology and a MS in Exercise Science and Research."
