@@ -1,9 +1,8 @@
 app.constant('constants', {
     contentUrl: 'app/',
     appBaseUrl: 'app/',
-    //apiUrl    : 'http://api.ninjafitgyms.com/',
-    //apiUrl    : 'http://api.ninjafitgyms.com/warehouse/',
     apiUrl    : 'http://www.ninjafitgyms.com/api/',
+    // apiUrl    : 'http://localhost:5100/api/',
     showPopup : false,
     waivers   : [
         {
@@ -92,6 +91,12 @@ app.constant('constants', {
             bio: "Training and competing have been a focal point for me throughout my entire life. I competed in gymnastics at a high level until I was 9 years old and decided to switch sports. I began swimming competitively at this point and did so throughout college and beyond. My middle school and high school years were devoted to competing on various national teams and training for a chance to earn a spot on the US Olympic Team. I competed in the 2000, 2004 and 2008 US Olympic Trials in the 100 and 200m butterfly. During this time, I swam at the University of Florida, where I was an All-American. When I decided to retire from swimming I took on running competitively. I’ve run in a variety of races including the New York City Marathon; and also qualified for the Boston Marathon. I recently started to compete in Obstacle Course Racing and will be competing in the US Nationals in Miami to earn a spot on Team USA. I’ll also be competing in OCR World’s in Canada. I’ve also set a goal to start competing in Ninja competitions in the near future.\nThroughout my years of competing I found my passion for helping others achieve their own goals in fitness and health. I’m a NASM (National Academy of Sports Medicine) Certified Personal Trainer, with a specialization in Sports Nutrition. I’ve committed myself to being a student and constantly growing, learning and seeking education so that I can help others with my passion and the knowledge I attain. I’ve also worked at DC Fitness in Los Angeles, CA along with Lake Mary Fit Club.\nWhen I’m not coaching you can still find me at the gym quite frequently along with running, doing yoga, rock climbing, kickboxing, surfing at the beach, or teaching swim lessons! I’m also involved in the Special Needs ministry at my church."
         },
         {
+            image: 'images/christina.jpg',
+            name : 'Christina Martin',
+            title: 'Trainer',
+            bio: "I am a coach for the next generation of awesome American Ninja Warriors! I have a dance background that is roped alongside living life with Type 1 diabetes. I am the proud founder and Executive Director of a new local 501(c)(3) non-profit organization for diabetes awareness and support called Type Zero Foundation. While studying at the University of Central Florida to complete my bachelor's degree in Sport and Exercise Science, my goal is to help strengthen the health education that is provided to families in our community. I started training as a hip hop and contemporary dancer at the age of eight years old and now perform and teach children and adults around Central Florida. I am a member of a professional, national winning, hip hop dance crew called The Squad. Past professional work includes Vixen Talent Productions, contemporary with Emotions Dance Company, music videos with artists Trish and Jahmal, and America's Got Talent. Being a coach means that I am not only privileged to teach our members how to conquer obstacles we create, but also to conquer what life throws at them by building both mental and physical strength, a skill needed for success in all facets of life!"
+        },
+        {
             image: 'images/jason.jpg',
             name: 'Jason Kotzin',
             title: "Kids Coach",
@@ -104,7 +109,7 @@ app.constant('constants', {
             bio: "My name is Miguel Santos! I'm 20 years old and I love ninja warrior training!!! My athletic background involves many sports such as football,soccer, volleyball, and track! The one sport I excelled in the most was soccer following a division two scholarship to mercy college in New York!! I played only for one year then decided to come home and finish my studies at Valencia college to get my associates degree in sports management. I've been at ninja fit gym for almost a year now and have developed in so many ways such as strength, agility, balance, speed, etc. I tested the Daytona qualifying course in April and hope to get on to the show next season!!!"
         },
         {
-            image: 'images/profile_pic.png',
+            image: 'images/eric.jpg',
             name: 'Eric Ortiz',
             title: 'Trainer',
             bio: "My name is Eric Ortiz and I'm 32 years old. My life has been spent in the water. I was a water polo player during high school, surfed, and I’ve been a lifeguard instructor and supervisor for many years. I started running about 5 years ago, starting with 5ks and continued on to half marathons and challenge weekends. 2 years ago, I started CrossFit and Olympic lifting and fell in love. I’ve participated in team competition, as well2 CrossFit Lift Offs where I have placed both times. I’ve also coached several teams at local competitions, where most of my teams have placed. I have also done many OCR (obstacle course races) in the past 2 years. I will continue growing in my own training and coaching going forward - it’s become an integral part of who I am."

@@ -1,7 +1,7 @@
 <section class="section weekly-schedule-view">
 
     <header class="section-header">
-            
+
         <span ng-bind="header"></span>
         <span ng-if="!showNav">
             <loader visible="loading"></loader>
@@ -15,7 +15,7 @@
             <span class="fa fa-angle-left"></span>
         </button>
 
-        <span 
+        <span
             ng-if="!loading"
             ng-bind="title"
             class="text">
@@ -32,13 +32,13 @@
 
         <div
             class="week-day"
-            ng-repeat="day in days" 
+            ng-repeat="day in days"
             ng-class="{ today: day.isToday }">
 
 
             <div class="hours">
 
-                <div 
+                <div
                     ng-repeat="hour in hours"
                     ng-bind="hour.text"
                     class="hour"></div>
@@ -46,19 +46,20 @@
 
             <div class="details">
 
-                <div 
-                    class="title" 
+                <div
+                    class="title"
                     ng-bind="day.title"></div>
 
                 <ul class="schedule">
                     <li ng-repeat="block in day.blocks" class="schedule-block">
-                        
+
                         <div ng-repeat="col in block.cols" class="block-col">
 
-                            <div
-                                ng-repeat="item in col.items" 
+                            <a
+                                ng-repeat="item in col.items"
                                 ng-style="item.style"
                                 ng-attr-type="{{item.type}}"
+                                ng-attr-href="{{item.link}}" 
                                 class="block-item">
 
                                 <span ng-bind="item.title"></span>
@@ -67,7 +68,7 @@
                                     <div class="arrow"></div>
                                     <div class="content" ng-bind="item.range"></div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </li>
                 </ul>

@@ -77,6 +77,7 @@ app.directive('weeklySchedule', function (warehouseService, utils, constants) {
         self.  end = blockItem.  end;
         self. type = blockItem. type;
         self.title = blockItem.title;
+        self.link  = blockItem.link;
         self.range = Date.toHour12(self.start, true) + ' - ' + Date.toHour12(self.end, true);
         self.style = {};
 
@@ -100,7 +101,7 @@ app.directive('weeklySchedule', function (warehouseService, utils, constants) {
             var   itemBtm = toInt(self.end);
             var   itemTop = toInt(self.start);
             var parentTop = toInt(startKey);
-            
+
             self.style.marginTop = (hourBlockHeight * (itemTop - parentTop)) + 'px';
             self.style.height    = (hourBlockHeight * (itemBtm - itemTop))   + 'px';
         };
