@@ -103,12 +103,6 @@ app.constant('constants', {
             bio: "My name is Jason Kotzin, I'm 19 years old, and I am an aerospace engineering student at the University of Central Florida. I grew up in Orlando, Florida and graduated from Winter Park High School in 2016. I've played basketball almost my whole life, but also played baseball, football, tennis and soccer growing up. I have been doing ninja training for about a year now and at this point I have competed in 3 ninja competitions. I placed 3rd in my first competition. I had the 6th fastest time in my second competition, which advanced me to the UNAA national finals, which will take place in Dallas in July."
         },
         {
-            image: 'images/miguel.jpg',
-            name: 'Miguel Santos',
-            title: "Kids Coach",
-            bio: "My name is Miguel Santos! I'm 20 years old and I love ninja warrior training!!! My athletic background involves many sports such as football,soccer, volleyball, and track! The one sport I excelled in the most was soccer following a division two scholarship to mercy college in New York!! I played only for one year then decided to come home and finish my studies at Valencia college to get my associates degree in sports management. I've been at ninja fit gym for almost a year now and have developed in so many ways such as strength, agility, balance, speed, etc. I tested the Daytona qualifying course in April and hope to get on to the show next season!!!"
-        },
-        {
             image: 'images/eric.jpg',
             name: 'Eric Ortiz',
             title: 'Trainer',
