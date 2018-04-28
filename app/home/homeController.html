@@ -1,6 +1,6 @@
 <div class="controller-view home-view">
 
-    <div 
+    <div
         ng-if="initializing !== false"
         class="content-loader">
         <div class="logo">
@@ -27,7 +27,7 @@
             <header>Today's Schedule</header>
 
             <ul class="items">
-                <li 
+                <li
                     ng-if="today.wod"
                     ng-click="goTo('wod')"
                     class="item clickable wod-item row">
@@ -36,7 +36,7 @@
                 </li>
 
                 <li
-                    ng-repeat="event in today.events" 
+                    ng-repeat="event in today.events"
                     class="item class-item row">
 
                     <span class="icon time" ng-bind="event.start"></span>
@@ -45,13 +45,13 @@
                 </li>
             </ul>
 
-            <div 
+            <div
                 ng-if="!today.isOpen && !today.loading"
                 class="empty align-center">
                 <span>Gym is closed today</span>
             </div>
 
-            <div 
+            <div
                 ng-if="today.loading"
                 class="empty align-center">
                 <span class="fa fa-spinner fa-spin"></span>
@@ -65,7 +65,7 @@
             ng-click="goTo('about-us')"
             class="details-block">
 
-            <div 
+            <div
                 class="background grayscale"
                 style="background-image: url(images/img_5_400.jpg);"></div>
 
@@ -83,11 +83,11 @@
             </div>
         </a>
 
-        <a 
+        <a
             ng-click="goTo('facility')"
             class="details-block">
 
-            <div 
+            <div
                 class="background grayscale"
                 style="background-image: url(images/functional_1_400.jpg);"></div>
 
@@ -109,7 +109,7 @@
             ng-click="goTo('about-us.staff')"
             class="details-block">
 
-            <div 
+            <div
                 class="background grayscale"
                 style="background-image: url(images/img_7_400.jpg);"></div>
 
@@ -131,7 +131,7 @@
             ng-click="goTo('pricing')"
             class="details-block">
 
-            <div 
+            <div
                 class="background grayscale"
                 style="background-image: url(images/img_3_400.jpg);"></div>
 
@@ -156,12 +156,12 @@
 
         <section class="facebook-post-content">
 
-            <div 
+            <div
                 ng-bind-html="facebook.post.text | hashTagLinks:facebook.post.hashTags:facebook.post.hashTagPrefixUrl"
                 class="post-body"></div>
 
             <div class="posted-by">
-                <a 
+                <a
                     target="_facebook"
                     ng-bind="facebook.page.name"
                     ng-attr-href="{{facebook.page.link}}"></a>
@@ -210,4 +210,46 @@
         <send-message></send-message>
         <contact-info address-map="true"></contact-info>
     </section>
+
+    <div ng-class="{ show: showPopup }" class="popup">
+  		<div class="panel">
+  			<div class="content">
+  				<header class="header">
+  					<button ng-click="closePopup()" class="close-btn ctrl">
+  						<span class="bar"></span>
+  						<span class="bar"></span>
+  					</button>
+  					<span>NinjaFit Kids Summer Camp</span>
+  				</header>
+  				<div class="image" ng-style="{ 'background-image': 'url(./images/kids_5.jpg)' }"></div>
+          <div class="sub-header">Calling ALL Future Ninja Warriors</div>
+  				<div class="details">
+  					<p>NinjaFit Gym Summer Camps are BACK!!</p>
+  					<p>Starting June 4th through August 10th!</p>
+  					<p>They will run from 9am - 3pm M-F (half day options available)</p>
+            <p>Contact us for details!</p>
+  				</div>
+  				<div class="separator">
+  					<p>Interested?</p>
+  					<p>Reserve your spot today!</p>
+  				</div>
+  				<footer class="footer">
+  					<a
+  				    	ng-attr-href="tel:407-250-4496"
+  				    	target="phone"
+  				    	class="link row">
+  				    	<div class="extender">Click to call us!</div>
+  				    	<span class="icon fa fa-phone"></span>
+  				    	<span class="text">407-250-4496</span>
+  					</a>
+  					<a class="link row" href="mailto:ninjafitgyms@gmail.com?subject=NinjaFit Kids Summer Camp">
+  						<div class="extender">Click to message us!</div>
+  						<span class="icon fa fa-envelope"></span>
+  						<span class="text ng-binding">ninjafitgyms@gmail.com</span>
+  					</a>
+  				</footer>
+  			</div>
+  		</div>
+    </div>
+	</div>
 </div>

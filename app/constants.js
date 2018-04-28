@@ -3,7 +3,8 @@ app.constant('constants', {
     appBaseUrl: 'app/',
     apiUrl    : 'http://www.ninjafitgyms.com/api/',
     // apiUrl    : 'http://localhost:5100/api/',
-    showPopup : false,
+    showPopup : true,
+    popupEnd  : new Date(2018, 7, 10),
     waivers   : [
         {
             "title":   "Adult Waiver",

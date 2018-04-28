@@ -22,7 +22,7 @@ app.controller('home', function ($scope, $rootScope, $timeout, warehouseService,
         utils.setCookie('nfg-announcement', true, expires);
     };
 
-    if (constants.showPopup && !utils.getCookie('nfg-announcement')) {
+    if (constants.showPopup && new Date() < constants.popupEnd && !utils.getCookie('nfg-announcement')) {
         $timeout(function () {
             $scope.showPopup = true;
         }, 200);
@@ -30,7 +30,7 @@ app.controller('home', function ($scope, $rootScope, $timeout, warehouseService,
 
     warehouseService
         .getSocialFeeds()
-        .then(function (social) { 
+        .then(function (social) {
 
             $scope.instagram = social.instagram;
             $scope.facebook  = {
@@ -48,7 +48,7 @@ app.controller('home', function ($scope, $rootScope, $timeout, warehouseService,
 
     warehouseService
         .getSchedule(todayKey)
-        .then(function (schedule) { 
+        .then(function (schedule) {
 
             var events = [];
             var today  = utils.first(schedule.days, function (day) {

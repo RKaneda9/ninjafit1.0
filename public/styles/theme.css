@@ -565,8 +565,19 @@ a.link:hover { color: #662E91; cursor: pointer; }
 }
 
 .popup .details p {
-	padding-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	font-size: 0.9rem;
+}
+
+.popup .sub-header {
+	background: #fff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.34rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: -1px;
+	padding: 15px 10px 10px 10px;
 }
 
 .popup .separator {
@@ -965,4 +976,8 @@ a.link:hover { color: #662E91; cursor: pointer; }
 
 @media (max-width: 550px) {
 	.facility-view .section-pane .image-list .image-item { flex: 1 150px; height: 150px; }
+}
+
+@media (max-height: 640px) {
+	.popup .separator { display: none; }
 }
