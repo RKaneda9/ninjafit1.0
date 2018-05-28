@@ -4,4 +4,4 @@ const
 
 app.use(express.static('public'));
 
-app.listen(8600, () => console.log('app listening on port 8600.');
+app.listen(8600, () => console.log('app listening on port 8600.'));
