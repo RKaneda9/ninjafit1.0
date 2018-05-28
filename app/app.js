@@ -32,6 +32,15 @@ app.config(function($stateProvider,$urlRouterProvider) {
                 }
             }
         })
+        .state("bring-the-ruckus", {
+            url: "/bring-the-ruckus",
+            views: {
+                contents: {
+                    controller: "bringTheRuckus",
+                    templateUrl: "app/calendar/bringTheRuckus.html"
+                }
+            }
+        })
         .state("facility", {
             url: "/facility",
             views: {

@@ -246,6 +246,11 @@ a.link:hover { color: #662E91; cursor: pointer; }
 .alert.dark    { color: #fff;    background-color: #000;    border-color: #000;    }
 
 /********************************************************************/
+/***                Bring the Ruckus                                */
+/********************************************************************/
+#bring-the-ruckus { width: 100%; border: none; }
+
+/********************************************************************/
 /*** 				Image Viewer 									*/
 /********************************************************************/
 .image-viewer .viewer-content { position: fixed; top: 0px; left: 0px; z-index: 11; right: 0px; bottom: 0px; background: rgba(0,0,0,0.95); display: flex; flex-direction: column; }

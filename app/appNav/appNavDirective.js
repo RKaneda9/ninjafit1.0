@@ -14,10 +14,6 @@ app.directive('appNav', function ($rootScope, $state, constants) {
         scope.goTo = function (stateName) {
             scope.isOpen = false;
 
-            if (stateName === 'bringtheruckus') {
-                window.location = "https://beambitious.clickfunnels.com/sales-page20748799";
-            }
-
             if (stateName === 'login') {
                 window.location = "https://ninjafitgyms.sites.zenplanner.com/login.cfm";
             }
