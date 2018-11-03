@@ -5,6 +5,7 @@ app.constant('constants', {
     // apiUrl    : 'http://localhost:5100/api/',
     showPopup : true,
     popupEnd  : new Date(2018, 7, 10),
+    bringTheRuckus2Link: 'https://ninjafitgyms.sites.zenplanner.com/event.cfm?eventId=46739BBE-31BF-4948-BC2E-5329B315B52D',
     waivers   : [
         {
             "title":   "Adult Waiver",
@@ -138,12 +139,6 @@ app.constant('constants', {
             name: 'Chad Young',
             title: "Owner/Head Trainer",
             bio: "I am a husband and father with three kids. I have an athletic background. I played college basketball, and designed strength and conditioning programs for many athletes for over 11 years. My passion is strength and conditioning, program design and weightlifting. I have many certifications including NASM CES (corrective exercise specialist), a BS in Kinesiology and a MS in Exercise Science and Research."
-        },
-        {
-            image: 'images/dan2.jpg',
-            name: 'Dan Goldstein',
-            title: "Owner",
-            bio: "I am originally from the Chicagoland area. I have been involved in athletics for my entire life. While attending Northwestern University, I was a member of the cheerleading squad. I have loved physical fitness and exercise for many years. After college I became certified as a Fitness Trainer through ISSA. "
         },
         {
             image: 'images/profile_pic.png',

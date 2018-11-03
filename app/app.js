@@ -37,7 +37,16 @@ app.config(function($stateProvider,$urlRouterProvider) {
             views: {
                 contents: {
                     controller: "bringTheRuckus",
-                    templateUrl: "app/calendar/bringTheRuckus.html"
+                    templateUrl: "app/bringTheRuckus/bringTheRuckusController.html"
+                }
+            }
+        })
+        .state("bring-the-ruckus-2", {
+            url: "/bring-the-ruckus-2",
+            views: {
+                contents: {
+                    controller: "bringTheRuckus2.0",
+                    templateUrl: "app/bringTheRuckus/bringTheRuckus2Controller.html"
                 }
             }
         })
