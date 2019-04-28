@@ -131,6 +131,15 @@ app.config(function($stateProvider,$urlRouterProvider) {
                 }
             }
         })
+        .state("kids-summer-camp", {
+            url: "/kids-summer-camp",
+            views: {
+                contents: {
+                    controller: "kidsSummerCamp",
+                    templateUrl: "app/kidsSummerCamp/kidsSummerCampController.html"
+                }
+            }
+        })
         .state("register", {
             url: "/register",
             views: {

@@ -1,0 +1,45 @@
+<div class="controller-view kids-summer-camp-view">
+  <header class="sponsor-logos">
+    <div class="image">
+      <img src="images/logo.jpg" />
+    </div>
+    <div class="image">
+      <img src="images/bring-the-ruckus-1.png" />
+    </div>
+    <div class="image">
+      <img src="images/invel.png" />
+    </div>
+  </header>
+
+  <div class="overview">
+    <h2>Kids Summer Camp</h2>
+    <p class="desc">Summer Camp is approaching! If you have a child that is interested in American Ninja Warrior, or just want to have some fun training on obstacles, learning different techniques to achieve their goals, Then NinjaFit Gym is the place to be. Kids will be put through obstacle skills development with a NinjaFit kids coach who will also run them through actual courses all while having fun!</p>
+  </div>
+
+  <div class="split details">
+    <div class="image">
+      <img src="images/kids_5.jpg" />
+    </div>
+    <div>
+      <p>
+        <span class="type">Time:</span>
+        <span class="value">9:00am - 3:00pm</span>
+      </p>
+      <p>
+        <span class="type">Price:</span>
+        <span class="value">$275</span>
+      </p>
+      <p>15% off for Members</p>
+    </div>
+  </div>
+
+  <div class="dates">
+    <h3>Dates and Registration</h3>
+    <p class="desc">Click on one of the links below for more information on each time slot.</p>
+    <ul class="date-list">
+      <li class="date-list-item" ng-repeat="info in dateList">
+        <a ng-attr-href="{{info.link}}" ng-bind="info.text"></a>
+      </li>
+    </ul>
+  </div>
+</div>
