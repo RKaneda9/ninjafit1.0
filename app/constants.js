@@ -71,7 +71,7 @@ app.constant('constants', {
 
     contact: {
         phone: '407-250-4496',
-        email: 'info@ninjafitgyms.com',
+        email: 'ninjafitgyms@gmail.com',
         address: {
             street: '6541 North Orange Blossom Trail, Suit 100',
             city: 'Orlando',
